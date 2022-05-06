@@ -29,7 +29,7 @@ class cctv{
 		document.getElementById("flashcontent-container").innerHTML=""
 		document.getElementById("flashcontent-container").append(cctv.img)
 		chn_container.querySelectorAll("div>img,div>span").forEach((e,i)=>{e.onclick=()=>{cctv.stream_img(parseInt(i/2))}})
-		chn_container.querySelector("div>span").click()
+		chn_container.querySelector("div>span:nth-child(2)").click()
 	}
 
 	static stream_img(chn){
