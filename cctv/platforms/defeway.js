@@ -14,7 +14,7 @@ class cctv{
 	}
 
 	static autologin(){
-		document.cookie="lxc_save=admin%2C; dvr_camcnt=8; dvr_clientport=80; dvr_sensorcnt=4; dvr_usr=admin; dvr_pwd=; iSetAble=1; iPlayBack=1"
+		document.cookie="lxc_save=admin%2C; dvr_camcnt=8; dvr_clientport=80; dvr_sensorcnt=4; dvr_usr=admin; dvr_pwd=null; iSetAble=1; iPlayBack=1"
 		location="/view2.html"
 	}
 
@@ -28,7 +28,7 @@ class cctv{
 		cctv.img=document.createElement("img")
 		document.getElementById("flashcontent-container").innerHTML=""
 		document.getElementById("flashcontent-container").append(cctv.img)
-		chn_container.querySelectorAll("div>img,div>span").forEach((e,i)=>{e.onclick=()=>{cctv.stream_img(i/2+1)}})
+		chn_container.querySelectorAll("div>img,div>span").forEach((e,i)=>{e.onclick=()=>{cctv.stream_img(parseInt(i/2))}})
 		chn_container.querySelector("div>span").click()
 	}
 
