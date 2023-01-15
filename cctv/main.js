@@ -1,4 +1,4 @@
-class CCTV{
+class CCTV{ 
 	static load(){
 		const x=[
 			[
